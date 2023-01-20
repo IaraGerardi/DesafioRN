@@ -1,29 +1,28 @@
-import { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
 import * as SecureStore from "expo-secure-store";
-// import Cart from "./views/cart/cartView";
-import Home from "./views/Home/homeView";
-// import LogIn from "./views/LogIn/logInView";
-// import Profile from "./views/profile/profileView";
+import Slider from "./views/GlobalComponents/Slider";
+import LogIn from "./views/UserManagement/logInView";
+import Register from "./views/UserManagement/registerView";
+import { View, StyleSheet, ScrollView } from "react-native";
+import { useState, useEffect } from "react";
 
 export default function App() {
-  // const [key, onChangeKey] = useState('Your key here');
   const [isSignedIn, setSignedIn] = useState(false);
-  // const [value, onChangeValue] = useState('Your value here');
+  
+  useEffect(() => {
+    async function getValue() {
+      let secureStoreSession = await SecureStore.getItemAsync("session");
+      setSignedIn(secureStoreSession);
+      console.log("session:", secureStoreSession);
+    }
+    getValue();
+  });
 
-  // async function saveValue(key, value) {
-  //   await SecureStore.setItemAsync(key, value);
-  // }
-  // async function getValue(key) {
-  //   let result = await SecureStore.getItemAsync(key);
-  //   if (result) {
-  //     alert("🔐 Here's your value 🔐 \n" + result);
-  //   } else {
-  //     alert("No values stored under that key.");
-  //   }<View styles={styles}><Home /></View>
-  // }
-
-  return <View styles={styles}><Home /></View>;
+  return (
+    <View style={styles.container}>
+      <LogIn />
+      <Register />
+    </View>
+  );
   // return isSignedIn ? (
   //   <>
   //     <Stack.Screen name="Home" component={Home} />
@@ -40,8 +39,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "blue",
-    alignItems: "center",
+    flexDirection: "column",
     justifyContent: "center",
+    backgroundColor: "red",
+    alignItems: "center",
   },
 });
