@@ -1,89 +1,71 @@
-import { Text, View, Button, ViewBase, StyleSheet, FlatList } from "react-native";
 import { useState } from "react";
+import data from "../../data/CarrouselData.json";
 import CarrouselItem from "./components/CarrouselItem";
+import Icon from "react-native-vector-icons/FontAwesome5";
+import { View, FlatList, StyleSheet, TouchableOpacity } from "react-native";
 
-export function Carrousel({ carrouselStyle }) {
-  const [data, setData] = useState([]);
-  const [item, setItem] = useState(0);
+export function Carrousel() {
+  const [itemActive, setActiveItem] = useState(0);
 
   const itemLess = () => {
-    item < 1 ? setItem(news.length - 1) : setItem(item - 1);
+    itemActive < 1
+      ? setActiveItem(data.length - 1)
+      : setActiveItem(itemActive - 1);
   };
+
   const itemPlus = () => {
-    item >= news.length - 1 ? setItem(0) : setItem(item + 1);
+    itemActive >= data.length - 1
+      ? setActiveItem(0)
+      : setActiveItem(itemActive + 1);
   };
 
   const carrouselButton = ({ item }) => {
-    <Button
-      onClick={() => setItem(item)}
-      styles={[
-        styles.buttons.button,
-        item === item.id
-          ? styles.buttons.selectedButton
-          : styles.buttons.defaultButton,
-      ]}
-    />;
+    return (
+      <TouchableOpacity
+        onPress={() => setActiveItem(item.id - 1)}
+        style={
+          item.id - 1 === itemActive
+            ? styles.activeButton
+            : styles.inactiveButton
+        }
+      />
+    );
   };
 
   return (
     <View>
-      <View>
-        <View onClick={itemLess}>
-          {/* <Icon classname="w-5 h-5" type="leftArrow" width="24" height="24" /> */}
-        </View>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Icon name="arrow-left" size={20} color="black" onPress={itemLess} />
         <FlatList
+          horizontal={true}
           data={data}
           renderItem={carrouselButton}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.subtitle}
         />
-        <View onClick={itemPlus}>
-          {/* <Icon classname="w-5 h-5" type="rightArrow" width="24" height="24" /> */}
-        </View>
+        <Icon name="arrow-right" size={20} color="black" onPress={itemPlus} />
       </View>
-      <CarrouselItem data={data[item]} style={styles[carrouselStyle]} />
+      <CarrouselItem data={data[itemActive]} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  newReleases: {
-    mainContainer:{},
-    subContainer:{},
-    title:{},
-    button:{},
-    image:{}
+  activeButton: {
+    backgroundColor: "#2b7eff",
+    width: 25,
+    height: 25,
+    margin: 5,
   },
-  latestContent: {
-    mainContainer:{},
-    subContainer:{},
-    title:{},
-    button:{},
-    image:{}
-  },
-  news: {
-    mainContainer:{},
-    subContainer:{},
-    title:{},
-    button:{},
-    image:{}
-  },
-  theWorldOfBatman: {
-    mainContainer:{},
-    subContainer:{},
-    title:{},
-    button:{},
-    image:{}
-  },
-  whoIsWho: {
-    mainContainer:{},
-    subContainer:{},
-    title:{},
-    button:{},
-    image:{}
-  },
-  buttons: {
-    button: {},
-    defaultButton: {},
-    selectedButton: {},
+  inactiveButton: {
+    backgroundColor: "#8db9fc",
+    width: 15,
+    height: 15,
+    margin: 5,
   },
 });

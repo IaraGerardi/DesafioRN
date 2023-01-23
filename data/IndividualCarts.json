@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "LET'S TALK ABOUT TAWKY",
+    "subtitle": "Explore the DCU",
+    "paragraph": "Shazam's talking tiger pal may not make a lot of sense, but since when has that been a problem in comics?",
+    "imageLink": "https://static.dc.com/2023-01/BlogRoll_Mobile_TawkyTawny.jpg?w=480",
+    "buttonText": "Get to Know This Furry Friend"
+  },
+  {
+    "id": 2,
+    "title": "JOIN THE DC UNIVERSE",
+    "subtitle": false,
+    "paragraph": "Register for FREE to access member-exclusive content and activities, read FREE comics from DC UNIVERSE INFINITE, and get alerts and early access to exclusive products from DC Shop! ",
+    "imageLink": "localhost:8080/img/DCUNIVERSE",
+    "buttonText": "SING UP KNOW"
+  }
+]

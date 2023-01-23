@@ -29,6 +29,8 @@ export default function LogIn() {
       const sessionToken = session._tokenResponse.idToken
       console.log(sessionToken);
       saveValue('session', sessionToken)
+      // dispatch({type: 'LogIn'})
+
     } catch (err) {
       setFirebaseErrors("Email and/or password incorrect");
     }

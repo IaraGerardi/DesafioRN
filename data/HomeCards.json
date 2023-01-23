@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "The DC Community Bests of 2022",
+    "subtitle": "SUPERHERO SUPERLATIVES",
+    "paragraph": false,
+    "imageLink": "https://static.dc.com/2023-01/dc_community_2022superlatives_16x9.jpg?w=480",
+    "buttonText": "THAT'S A WRAP"
+  },
+  {
+    "id": 2,
+    "title": "NEW Justice League gold logo raglans",
+    "subtitle": "DC SHOP",
+    "paragraph": false,
+    "imageLink": "https://static.dc.com/2023-01/DC%20Shop%20Justice%20League%20Gold%20Emblem%2016x9.jpg?w=480",
+    "buttonText": "SHOP NOW"
+  },
+  {
+    "id": 3,
+    "title": "NOW STREAMING ON HBO MAX",
+    "subtitle": "BLACK ADAM",
+    "paragraph": false,
+    "imageLink": "https://static.dc.com/2022-10/DC_BAhub_4UP_main_mob.jpg?w=480",
+    "buttonText": "SING UP KNOW"
+  },
+  {
+    "id": 4,
+    "title": "DCUI ULTRA EXPANDS TO OVER 32,000 COMICS",
+    "subtitle": "DC UNIVERSE INFINITE",
+    "paragraph": false,
+    "imageLink": "https://static.dc.com/2022-11/DC_featured_tout_1920x10802x.jpg?w=480",
+    "buttonText": "JOIN TODAY"
+  }
+]

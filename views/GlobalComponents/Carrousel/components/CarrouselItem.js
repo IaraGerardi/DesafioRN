@@ -1,13 +1,50 @@
-import { Button, Image, Text, View } from "react-native";
+import { Button, Image, Text, View, StyleSheet } from "react-native";
 
-export default function CarrouselItem({ title, styles, subtitle, imageLink, buttonText }) {
-    return (
-      <View styles={styles.mainContainer}>
-        <View styles={styles.subContainer}>
-          <Text styles={styles.title}>{}</Text>
-          <Button styles={styles.button} title={'buttonText'}/>
-        </View>
-        <Image styles={styles.image} source={{ uri: imageLink }}/>
+export default function CarrouselItem({ data }) {
+  const { title, subtitle, imageLink, buttonText } = data;
+
+  return (
+    <View style={styles.mainContainer}>
+      <View style={styles.subContainer}>
+        <Text style={styles.subtitle}>{subtitle}</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Button style={styles.button} title={buttonText} />
       </View>
-    );
-  }
+      <Image style={styles.image} source={{ uri: imageLink }} />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  mainContainer: {
+    // flex: 1,
+    backgroundColor: 'yellow'
+  },
+  subContainer: {
+    // flex: 1,
+  },
+  title: {
+    // flex: 1,
+  },
+  button: {
+    // flex: 1,
+  },
+  image: {
+    width: 20,
+    height: 20,
+    // flex: 1,
+  },
+
+  characters: {
+    mainContainer: {},
+    subContainer: {},
+    title: {},
+    button: {},
+    image: {},
+  },
+  buttons: {
+    button: {},
+    defaultButton: {},
+    selectedButton: {},
+  },
+});

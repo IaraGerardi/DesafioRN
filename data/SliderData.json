@@ -1,0 +1,207 @@
+{
+  "newReleases": [
+    {
+      "id": 1,
+      "title": "DARK CRISIS",
+      "subtitle": false,
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/DCUI_cvr_DarkCrisis_7.jpg?w=640",
+      "buttonText": false
+    },
+    {
+      "id": 2,
+      "title": "DC VS VAMPIRES",
+      "subtitle": false,
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/DCUI_cvr_DCvsVamps_AOW_6.jpg?w=640",
+      "buttonText": false
+    },
+    {
+      "id": 3,
+      "title": "DCEASED: WAR",
+      "subtitle": false,
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/DCUI_cvr_DCeased_WUG_5.jpg?w=640",
+      "buttonText": false
+    },
+    {
+      "id": 4,
+      "title": "NIGHTWING #99",
+      "subtitle": false,
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/DCUI_cvr_Nightwing_99.jpg?w=640",
+      "buttonText": false
+    },
+    {
+      "id": 5,
+      "title": "CATWOMAN 2018",
+      "subtitle": false,
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/DCUI_cvr_Catwoman_50.jpg?w=640",
+      "buttonText": false
+    }
+  ],
+  "latestContent": [
+    {
+      "id": 1,
+      "title": "YEAR IN REVIEW",
+      "subtitle": "DC IN '22",
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/DC_VideoTB_22YearinReview.jpg?w=480",
+      "buttonText": false
+    },
+    {
+      "id": 2,
+      "title": "BATMAN: THE BRAVE AND BOLD",
+      "subtitle": "DC SUPER",
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/DC_SuperScenes31_BatmanTheBraveAndTheBoldTHUMBNAIL_16x9_Final.jpg?w=640",
+      "buttonText": false
+    },
+    {
+      "id": 3,
+      "title": "SUICIDE SQUAD",
+      "subtitle": "GAMES",
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2022-12/FINAL_youtube_thumbnail_Batman_3.png?w=640",
+      "buttonText": false
+    },
+    {
+      "id": 4,
+      "title": "DC SUPER",
+      "subtitle": "DOOM PATROL",
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/DC_SuperScenes37_DoomPatrol_Thumbnail.jpg?w=640",
+      "buttonText": false
+    },
+    {
+      "id": 5,
+      "title": "GAMES",
+      "subtitle": "GOTHAM KNIGHTS",
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2022-11/GK_RH_TRAILER_THUMB_16x9_ALT_01.jpg?w=640",
+      "buttonText": false
+    }
+  ],
+  "latestNews": [
+    {
+      "id": 1,
+      "title": "WONDER GIRL HOMECOMING",
+      "subtitle": "WEEKEND SCAPE",
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/Thumbnail_16x9_WE_WonderGir.jpg?w=640",
+      "buttonText": "TO THE AMAZONS"
+    },
+    {
+      "id": 2,
+      "title": "TWELVE UNANSWERED QUESTIONS",
+      "subtitle": "DC HOUSE OF LIST",
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/Thumbnail_16x9_HL_LazPlnet.jpg?w=640",
+      "buttonText": "BATMAN"
+    },
+    {
+      "id": 3,
+      "title": "DC UNIVERSE INFITE",
+      "subtitle": "DC UNIVERSE",
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/Thumbnail_16x9_DCUI_A2Z.jpg?w=640",
+      "buttonText": "NOW AVAILABLE"
+    },
+    {
+      "id": 4,
+      "title": "LEGACY AND FATE",
+      "subtitle": "NEW ERA COMICS",
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/Thumbnail_16x9_DC_Plans.jpg?w=640",
+      "buttonText": "BRING YOU UP"
+    },
+    {
+      "id": 5,
+      "title": "SEVEN WINTER STORIES",
+      "subtitle": "DC HOUSE OF LIST",
+      "paragraph": false,
+      "imageLink": "https://static.dc.com/2023-01/Thumbnail_16x9_HL_7Snowy.jpg?w=640",
+      "buttonText": "ALL THE FUN"
+    }
+  ],
+  "theWorldOfBatman": [
+    {
+      "id": 1,
+      "title": "Batman",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_Batman_20190116_5c3fc4b40faec2.47318964.jpg?itok=-fikeSiI"
+    },
+    {
+      "id": 2,
+      "title": "Catwoman",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_Catwoman_5c47c984ed1d66.81377433.jpg?itok=zv1Ri5SJ"
+    },
+    {
+      "id": 3,
+      "title": "Alfred Pennyworth",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_AlfredPennyworth_5c40ddc7b0e412.20200112.jpg?itok=dFnOKlbW"
+    },
+    {
+      "id": 4,
+      "title": "Riddler",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_Riddler_5c53a3b5e01958.22326638.jpg?itok=gmsT-SfE"
+    },
+    {
+      "id": 5,
+      "title": "Penguin",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_Penguin_5c5250a8ad2683.23365592.jpg?itok=hyS37hnq"
+    },
+    {
+      "id": 6,
+      "title": "James Gordon",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_JamesGordon_5c489d36ad53c6.78970822.jpg?itok=x8_IngVP"
+    },
+    {
+      "id": 7,
+      "title": "Carmine Falcone",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_CarmineFalcone_60cc324de5eec0.03209868.jpg?itok=9xti_rNg"
+    },
+    {
+      "id": 8,
+      "title": "Sal Maroni",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_SalMaroni_60dcd13785fb14.35144346.jpg?itok=UPcCcIQu"
+    }
+  ],
+  "whoIsWho": [
+    {
+      "id": 1,
+      "title": "SUPERMAN",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/whos_who/public/Char_WhosWho_Superman_20190116_5c3fc71f524f38.28405711.jpg?itok=342N-dja"
+    },
+    {
+      "id": 2,
+      "title": "BATMAN",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/whos_who/public/Char_WhosWho_Batman_20190116_5c3fc4b40faf04.59002472.jpg?itok=eXehq-Ei"
+    },
+    {
+      "id": 3,
+      "title": "WONDER WOMAN",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/whos_who/public/Char_WhosWho_WonderWoman_20190116_5c3fc6aa51d124.25659603.jpg?itok=kx42fT9H"
+    },
+    {
+      "id": 4,
+      "title": "GREEN LANTERN",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/whos_who/public/Char_WhosWho_GreenLantern%2920200721_5f173adcedb982.94529743.jpg?itok=3jpwHy-h"
+    },
+    {
+      "id": 5,
+      "title": "FLASH",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/whos_who/public/Char_WhosWho_Flash_20190116_5c3fcadbc6a963.74676553.jpg?itok=CXaNeAzA"
+    },
+    {
+      "id": 6,
+      "title": "AQUAMAN",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/whos_who/public/Char_WhosWho_Aquaman_5c411a95e710b9.62155274.jpg?itok=xX0wDSYt"
+    },
+    {
+      "id": 7,
+      "title": "CYBORG",
+      "imageLink": "https://www.dc.com/sites/default/files/styles/whos_who/public/Char_WhosWho_Cyborg_20190116_5c3fcd9048a1a2.67778180.jpg?itok=N-UsHdT5"
+    }
+  ]
+}
