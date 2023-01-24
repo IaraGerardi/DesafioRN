@@ -3,7 +3,7 @@ import { Carrousel } from "../GlobalComponents/Carrousel/Carrousel";
 import Footer from "../GlobalComponents/Footer";
 import { Slider } from "../GlobalComponents/Slider";
 import HomeCards from "./components/HomeCards";
-import cartData from '../data/IndividualCarts.json';
+import cartData from '../../data/IndividualCarts.json';
 import Card from "../GlobalComponents/Card/Card";
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
         sliderTitle="NEWS FROM AROUND THE MULTIVERSE"
       />
       <Card data={cartData[1]} type="joinDCUniverse"/>
-      <Footer />
+      {/* <Footer /> */}
     </ScrollView>
   );
 }

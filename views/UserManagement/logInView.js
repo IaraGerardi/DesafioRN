@@ -1,10 +1,12 @@
 import { Formik } from "formik";
-import { useState } from "react";
+import { useState, useContext } from "react";
+// import { GlobalContext } from "./Context/GlobalContext";
+import { GlobalContext } from "../../Context/GlobalContext";
 import Input from "./components/Input";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "../../firebaseConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import * as SecureStore from 'expo-secure-store';
+import * as SecureStore from "expo-secure-store";
 import { Text, View, Button, StyleSheet } from "react-native";
 import { LogInSchema } from "./validationSchemas/logInSchema";
 
@@ -13,6 +15,7 @@ const auth = getAuth(app);
 
 export default function LogIn() {
   const [firebaseErrors, setFirebaseErrors] = useState();
+  const { logIn } = useContext(GlobalContext);
 
   async function saveValue(key, value) {
     await SecureStore.setItemAsync(key, value);
@@ -25,13 +28,11 @@ export default function LogIn() {
         values.email,
         values.password
       );
-      //   _tokenResponse.idToken
-      const sessionToken = session._tokenResponse.idToken
-      console.log(sessionToken);
-      saveValue('session', sessionToken)
-      // dispatch({type: 'LogIn'})
-
+      const sessionToken = session._tokenResponse.idToken;
+      saveValue("session", sessionToken);
+      logIn()
     } catch (err) {
+      console.log(err)
       setFirebaseErrors("Email and/or password incorrect");
     }
   };

@@ -107,15 +107,22 @@ export const cardStyles = StyleSheet.create({
     },
     theWorldOfBatman: {
       mainContainer: {
+        flex: 1,
+        width: 60,
+        height: 100,
+        margin: 5
         // backgroundColor: "blue",
       },
       image: {
+        width: 60,
+        height: 60,
         // backgroundColor: "blue",
       },
       subtitle: {
         // backgroundColor: "blue",
       },
       title: {
+        width: 60,
         // backgroundColor: "blue",
       },
       button: {

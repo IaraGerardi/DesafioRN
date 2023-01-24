@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
 import Card from "./Card/Card";
-import sliderData from "../data/SliderData.json";
+import sliderData from "../../data/SliderData.json";
 
 export function Slider({ sliderTitle, sliderType }) {
   return (

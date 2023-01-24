@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 import { View, Text, Button, Image } from "react-native";
-import Video from 'react-native-video';
 import { cardStyles } from "./CardStyles";
 
 export default function Card({ data, type }) {

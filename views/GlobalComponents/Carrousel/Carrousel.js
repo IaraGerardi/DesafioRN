@@ -1,5 +1,5 @@
 import { useState } from "react";
-import data from "../../data/CarrouselData.json";
+import data from "../../../data/CarrouselData.json";
 import CarrouselItem from "./components/CarrouselItem";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import { View, FlatList, StyleSheet, TouchableOpacity } from "react-native";

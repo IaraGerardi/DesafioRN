@@ -19,7 +19,7 @@ export function Characters() {
       <Merch />
       <Slider sliderType={"whoIsWho"} sliderTitle="WHO'S WHO" />
       <CharactersFilter />
-      <Footer />
+      {/* <Footer /> */}
     </ScrollView>
   );
 }
