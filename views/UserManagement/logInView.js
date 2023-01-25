@@ -1,19 +1,19 @@
 import { Formik } from "formik";
 import { useState, useContext } from "react";
-// import { GlobalContext } from "./Context/GlobalContext";
 import { GlobalContext } from "../../Context/GlobalContext";
 import Input from "./components/Input";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "../../firebaseConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import * as SecureStore from "expo-secure-store";
-import { Text, View, Button, StyleSheet } from "react-native";
 import { LogInSchema } from "./validationSchemas/logInSchema";
+import { Text, View, TouchableOpacity } from "react-native";
+import { styles } from "./styles/formStyles";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export default function LogIn() {
+export default function LogIn({ navigation }) {
   const [firebaseErrors, setFirebaseErrors] = useState();
   const { logIn } = useContext(GlobalContext);
 
@@ -30,9 +30,9 @@ export default function LogIn() {
       );
       const sessionToken = session._tokenResponse.idToken;
       saveValue("session", sessionToken);
-      logIn()
+      logIn();
     } catch (err) {
-      console.log(err)
+      console.log(err);
       setFirebaseErrors("Email and/or password incorrect");
     }
   };
@@ -52,7 +52,7 @@ export default function LogIn() {
           errors,
           touched,
         }) => (
-          <View>
+          <View style={styles.container}>
             <Input
               id="email"
               values={values}
@@ -69,10 +69,22 @@ export default function LogIn() {
               handleChange={handleChange}
               handleBlur={handleBlur}
             />
-            <Text>{firebaseErrors}</Text>
+            <Text style={styles.errorMessage}>{firebaseErrors}</Text>
             <View>
-              <Button onPress={handleSubmit} title="Submit" />
-              <Text>Do you need to create an account? Sing up!</Text>
+              <TouchableOpacity
+                style={styles.submitButton}
+                onPress={handleSubmit}
+              >
+                <Text style={styles.submitButtonText}>Log In</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.redirectButton}
+                onPress={() => {
+                  navigation.navigate("Sign Up");
+                }}
+              >
+                <Text style={styles.redirectButtonText}>Sign Up</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}
@@ -80,12 +92,3 @@ export default function LogIn() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

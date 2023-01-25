@@ -17,24 +17,29 @@ export default function Input({
         value={values[id]}
         style={styles.input}
       />
-      {errors[id] && touched[id] ? <Text style={styles.errorMessage}>{errors[id]}</Text> : null}
+      {errors[id] && touched[id] ? (
+        <Text style={styles.errorMessage}>{errors[id]}</Text>
+      ) : null}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   input: {
-    borderColor: "grey",
-    backgroundColor: "white",
-    width: "70%",
+    width: 230,
+    padding: 3,
     borderWidth: 1,
     borderRadius: 5,
-    padding: 2,
+    borderColor: "grey",
   },
-  errorMessage: {},
+  errorMessage: {
+    width: 230,
+    color: "grey",
+    textAlign: 'center'
+  },
   inputContainer: {
-    backgroundColor: "yellow",
+    width: 250,
+    height: 60,
     alignItems: "center",
-    width: "100%",
   },
 });

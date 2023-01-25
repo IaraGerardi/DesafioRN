@@ -9,13 +9,13 @@ import { Characters } from "./views/Characters/CharactersView";
 import { LogOut } from "./views/UserManagement/logOut";
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 function Router() {
   const { session } = useContext(GlobalContext);
 
-  const Tab = createBottomTabNavigator();
   const Drawer = createDrawerNavigator();
+  const Stack = createNativeStackNavigator();
 
   return session ? (
     <Drawer.Navigator initialRouteName="Home">
@@ -24,10 +24,10 @@ function Router() {
       <Drawer.Screen name="Log Out" component={LogOut} />
     </Drawer.Navigator>
   ) : (
-    <Tab.Navigator>
-      <Tab.Screen name="Log In" component={LogIn} />
-      <Tab.Screen name="Sing Up" component={Register} />
-    </Tab.Navigator>
+    <Stack.Navigator initialRouteName="Log In">
+      <Stack.Screen name="Log In" component={LogIn} />
+      <Stack.Screen name="Sign Up" component={Register} />
+    </Stack.Navigator>
   );
 }
 

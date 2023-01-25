@@ -10,8 +10,9 @@ export const SignupSchema = Yup.object().shape({
     .min(2, "Too Short!")
     .max(20, "Too Long!")
     .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/,
-      "Must Contain 8 Characters, One Uppercase, One Lowercase and One Number"
+      /^(?=.*[a-z])(?=.*[A-Z])/,
+      "Must contain uppercase and lowercase characters"
     )
+    .matches(/^(?=.*[0-9])/, "Must contain a number")
     .required("Required"),
 });

@@ -4,13 +4,14 @@ import Input from "./components/Input";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "../../firebaseConfig";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { Text, View, Button, StyleSheet } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import { SignupSchema } from "./validationSchemas/singUpSchema";
+import { styles } from "./styles/formStyles";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export default function Register() {
+export default function Register({ navigation }) {
   const [firebaseErrors, setFirebaseErrors] = useState();
 
   const handleSubmit = async (values) => {
@@ -20,8 +21,6 @@ export default function Register() {
         values.email,
         values.password
       );
-      //   _tokenResponse.idToken
-      console.log(newUser);
     } catch (err) {
       setFirebaseErrors("Email already in use");
     }
@@ -60,22 +59,23 @@ export default function Register() {
           />
           <Text>{firebaseErrors}</Text>
           <View>
-            <Button onPress={handleSubmit} title="Submit" />
-            <Text>Do you have an account? Sing in!</Text>
+            <TouchableOpacity
+              style={styles.submitButton}
+              onPress={handleSubmit}
+            >
+              <Text style={styles.submitButtonText}>Sign Up</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.redirectButton}
+              onPress={() => {
+                navigation.navigate("Log In");
+              }}
+            >
+              <Text style={styles.redirectButtonText}>Log In</Text>
+            </TouchableOpacity>
           </View>
         </View>
       )}
     </Formik>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: "100%",
-    backgroundColor: "blue",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

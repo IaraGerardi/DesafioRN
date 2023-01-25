@@ -25,7 +25,7 @@ export function Merch() {
     <View style={styles.mainContainer}>
       {data.map((item) => {
         return (
-          <View style={styles.subContainer}>
+          <View key={item.icon} style={styles.subContainer}>
             <Icon name={item.icon} size={40} color="white" light />
             <Text style={styles.title}>{item.title}</Text>
           </View>
