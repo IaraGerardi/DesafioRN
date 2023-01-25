@@ -1,6 +1,6 @@
-import { View, Text, ScrollView } from "react-native";
+import { Text, StyleSheet, ScrollView } from "react-native";
 import { Carrousel } from "../GlobalComponents/Carrousel/Carrousel";
-import {Slider }from "../GlobalComponents/Slider";
+import { Slider } from "../GlobalComponents/Slider";
 import { CharactersFilter } from "./components/CharactersFilter";
 import { Community } from "./components/Community";
 import { Merch } from "./components/Merch";
@@ -9,7 +9,7 @@ import Footer from "../GlobalComponents/Footer";
 export function Characters() {
   return (
     <ScrollView nestedScrollEnabled={true}>
-      <Text>characters</Text>
+      <Text style={styles.viewTitle}>CHARACTERS</Text>
       <Carrousel />
       <Slider
         sliderType={"theWorldOfBatman"}
@@ -23,3 +23,15 @@ export function Characters() {
     </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  viewTitle: {
+    flex: 1,
+    height: 50,
+    fontSize: 25,
+    color: "white",
+    fontWeight: "500",
+    backgroundColor: "#080845",
+    textAlignVertical: "center",
+  }
+});

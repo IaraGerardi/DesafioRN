@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { View, Text, Button, Image } from "react-native";
+import { View, Text, Button, Image, TouchableOpacity } from "react-native";
 import { cardStyles } from "./CardStyles";
 
 export default function Card({ data, type }) {
@@ -11,7 +11,11 @@ export default function Card({ data, type }) {
       {subtitle && <Text style={style.subtitle}>{subtitle}</Text>}
       <Text style={style.title}>{title}</Text>
       {paragraph && <Text style={style.paragraph}>{paragraph}</Text>}
-      {buttonText && <Button style={style.button} title={"buttonText"} />}
+      {buttonText && (
+        <TouchableOpacity style={style.button}>
+          <Text style={style.buttonText}>{buttonText}</Text>
+        </TouchableOpacity>
+      )}
     </View>
-  ); 
+  );
 }

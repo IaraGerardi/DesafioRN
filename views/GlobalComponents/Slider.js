@@ -24,11 +24,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     height: '100%',
-    flexDirection: "column",
-    backgroundColor: 'red',
-    justifyContent: "center",
-    margin: 5,
     alignItems: "center",
+    paddingHorizontal: 15,
+    flexDirection: "column",
+    justifyContent: "center",
   },
   title:{
     
