@@ -28,21 +28,21 @@ const { width } = Dimensions.get("window");
 const styles = StyleSheet.create({
   mainContainer: {
     width,
-    height: 400,
     flex: 1,
-    justifyContent: "center",
+    height: 400,
     alignItems: "center",
+    justifyContent: "center",
   },
   subContainer: {
     width,
-    height: 200,
     flex: 1,
-    justifyContent: "space-around",
+    height: 200,
     alignItems: "center",
+    justifyContent: "space-around",
   },
   title: {
-    color: "white",
     fontSize: 22,
+    color: "white",
     fontWeight: "800",
   },
   subtitle: {
@@ -59,19 +59,6 @@ const styles = StyleSheet.create({
   image: {
     width: 20,
     height: 20,
-    // flex: 1,
+    resizeMode:'contain'
   },
-
-  // characters: {
-  //   mainContainer: {},
-  //   subContainer: {},
-  //   title: {},
-  //   button: {},
-  //   image: {},
-  // },
-  // buttons: {
-  //   button: {},
-  //   defaultButton: {},
-  //   selectedButton: {},
-  // },
 });

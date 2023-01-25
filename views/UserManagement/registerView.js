@@ -21,6 +21,7 @@ export default function Register({ navigation }) {
         values.email,
         values.password
       );
+      navigation.navigate("Log In");
     } catch (err) {
       setFirebaseErrors("Email already in use");
     }

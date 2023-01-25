@@ -29,7 +29,7 @@ export const ContextProvider = ({ children }) => {
       }
     }
     manageSession();
-  });
+  },[]);
 
   return (
     <GlobalContext.Provider value={{ ...state, logIn, logOut }}>

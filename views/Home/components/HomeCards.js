@@ -1,16 +1,11 @@
-import { View, FlatList} from "react-native";
-import Card from "../../GlobalComponents/Card/Card";
+import { View } from "react-native";
 import data from '../../../data/HomeCards.json';
+import Card from "../../GlobalComponents/Card/Card";
 
 export default function HomeCards() {
   return (
     <View>
       {data.map(item=><Card key={`${item.id}`} data={item} type="homeCards" />)}
-      {/* <FlatList
-        data={data}
-        renderItem={({ item }) => <Card data={item} type="homeCards" />}
-        keyExtractor={(item) => item.id}
-      /> */}
     </View>
   );
 }

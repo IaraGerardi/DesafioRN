@@ -1,4 +1,4 @@
-import { Text, View, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 import { Carrousel } from "../GlobalComponents/Carrousel/Carrousel";
 import Footer from "../GlobalComponents/Footer";
 import { Slider } from "../GlobalComponents/Slider";
@@ -25,8 +25,8 @@ export default function Home() {
         sliderType="latestNews"
         sliderTitle="NEWS FROM AROUND THE MULTIVERSE"
       />
-      <Card data={cartData[1]} type="joinDCUniverse"/>
-      {/* <Footer /> */}
+      {/* <Card data={cartData[1]} type="joinDCUniverse"/> */}
+      <Footer />
     </ScrollView>
   );
 }

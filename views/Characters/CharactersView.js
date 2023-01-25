@@ -12,14 +12,14 @@ export function Characters() {
       <Text style={styles.viewTitle}>CHARACTERS</Text>
       <Carrousel />
       <Slider
-        sliderType={"theWorldOfBatman"}
+        sliderType="theWorldOfBatman"
         sliderTitle="ENTER THE WORLD OF BATMAN"
       />
       <Community />
       <Merch />
-      <Slider sliderType={"whoIsWho"} sliderTitle="WHO'S WHO" />
-      <CharactersFilter />
-      {/* <Footer /> */}
+      <Slider sliderType="whoIsWho" sliderTitle="WHO'S WHO" />
+      {/* <CharactersFilter /> */}
+      <Footer />
     </ScrollView>
   );
 }
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: "white",
     fontWeight: "500",
+    paddingHorizontal: 15,
     backgroundColor: "#080845",
     textAlignVertical: "center",
-  }
+  },
 });

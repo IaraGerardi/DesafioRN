@@ -38,21 +38,22 @@ export function Merch() {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
+    height: 150,
     flexDirection: "row",
+    paddingHorizontal: 15,
     backgroundColor: "#429eff",
     justifyContent: "space-around",
-    height: 150,
   },
   subContainer: {
     flex: 1,
+    alignItems: "center",
     flexDirection: "column",
     justifyContent: "space-around",
-    alignItems: "center",
   },
   title: {
-    color: "white",
-    fontSize: 10,
-    fontWeight: '700',
     height: 30,
+    fontSize: 10,
+    color: "white",
+    fontWeight: '700',
   },
 });
