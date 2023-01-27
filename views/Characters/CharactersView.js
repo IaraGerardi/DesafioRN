@@ -1,10 +1,10 @@
 import { Text, StyleSheet, ScrollView } from "react-native";
 import { Carrousel } from "../GlobalComponents/Carrousel/Carrousel";
 import { Slider } from "../GlobalComponents/Slider";
-import { CharactersFilter } from "./components/CharactersFilter";
 import { Community } from "./components/Community";
 import { Merch } from "./components/Merch";
 import Footer from "../GlobalComponents/Footer";
+import { BrowseCharacters } from "./components/BrowseCharacters";
 
 export function Characters() {
   return (
@@ -18,7 +18,7 @@ export function Characters() {
       <Community />
       <Merch />
       <Slider sliderType="whoIsWho" sliderTitle="WHO'S WHO" />
-      {/* <CharactersFilter /> */}
+      <BrowseCharacters/>
       <Footer />
     </ScrollView>
   );
