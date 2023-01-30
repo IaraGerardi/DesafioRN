@@ -2,74 +2,41 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import FilterCharacters from "./FilterCharacters";
 import { View, Text, Image, StyleSheet } from "react-native";
+import CharactersList from "./CharactersList";
+import PaginationButtons from "./PaginationButtons";
+import { Search } from "./SearchBar";
 
 export function BrowseCharacters() {
-  const [route, setRoute] = useState("");
+  const [page, setPage] = useState(1);
   const [characters, setCharacters] = useState([]);
-
-  const filterOptions = [
-    { name: "alignment", options: ["Hero", "Neutral", "AntiHero"] },
-    { name: "type", options: ["Individual", "Places", "Teams"] },
-  ];
-  const [activeFilters, setActiveFilters] = useState({
-    alignment: null,
-    type: null,
-  });
+  const [searchedCharacters, setSearchedCharacters] = useState([]);
 
   const URI =
-    "https://q49vmnyalh.execute-api.us-east-1.amazonaws.com/Characters/characters";
+    "https://g0vov8z0z9.execute-api.us-east-1.amazonaws.com/Characters/data";
 
+  // const URI = 'http://190.173.113.169:8080/characters'
+  
   const getCharactersData = async () => {
     try {
-      const res = await axios.get(`${URI}/${route}`);
+      const res = await axios.get(URI);
       setCharacters(res.data.body);
+      setSearchedCharacters(res.data.body)
     } catch (err) {
       console.info(err.message);
     }
-  };
-
-  const handleQuery = () => {
-    const queriesArray = filterOptions
-      .filter((filter) => activeFilters[filter.name])
-      .map((filter) => `${filter.name}=${activeFilters[filter.name]}`);
-
-    if (!queriesArray.length) return;
-    if (queriesArray.length < 2) return setRoute(`${queriesArray[0]}`);
-
-    const routeQuery = queriesArray.join("&");
-    setRoute(routeQuery);
   };
 
   useEffect(() => {
     getCharactersData();
   }, []);
 
-  useEffect(() => {
-    handleQuery();
-  }, [activeFilters]);
-
   return (
     <View style={styles.mainContainer}>
       <Text style={styles.mainTitle}>BROWSE CHARACTERS</Text>
-      <Text>FILTERS</Text>
-      <FilterCharacters
-        filterOptions={filterOptions}
-        activeFilters={activeFilters}
-        setActiveFilters={setActiveFilters}
-      />
-      <View style={styles.charactersContainer}>
-        {characters?.map((item) => {
-          return (
-            <View key={item.photo} style={styles.characterBox}>
-              <Image
-                style={styles.characterImage}
-                source={{ uri: item.photo }}
-              />
-              <Text style={styles.characterName}>{item.name}</Text>
-            </View>
-          );
-        })}
-      </View>
+      {/* <FilterCharacters/> */}
+      <Search characters={characters} setSearchedCharacters={setSearchedCharacters} />
+      <CharactersList characters={searchedCharacters} />
+      {/* <PaginationButtons page={page} setPage={setPage} /> */}
     </View>
   );
 }
@@ -77,15 +44,21 @@ export function BrowseCharacters() {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    flexDirection: "column",
     alignItems: "center",
+    flexDirection: "column",
     justifyContent: "center",
   },
-  mainTitle: {},
+  mainTitle: {
+    fontSize: 33,
+    color: "#429eff",
+    fontWeight: "700",
+    textAlign: "left",
+    paddingVertical: 15,
+  },
   charactersContainer: {
     flex: 1,
-    flexDirection: "row",
     flexWrap: "wrap",
+    flexDirection: "row",
     justifyContent: "space-around",
   },
   characterBox: {

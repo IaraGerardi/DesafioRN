@@ -16,6 +16,7 @@ export default function Input({
         placeholder={id}
         value={values[id]}
         style={styles.input}
+        secureTextEntry={id == 'password' ? true : false}
       />
       {errors[id] && touched[id] ? (
         <Text style={styles.errorMessage}>{errors[id]}</Text>
