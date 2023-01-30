@@ -69,7 +69,6 @@ export default function LogIn({ navigation }) {
               handleChange={handleChange}
               handleBlur={handleBlur}
             />
-            <Text style={styles.errorMessage}>{firebaseErrors}</Text>
             <View>
               <TouchableOpacity
                 style={styles.submitButton}
@@ -86,6 +85,7 @@ export default function LogIn({ navigation }) {
                 <Text style={styles.redirectButtonText}>Sign Up</Text>
               </TouchableOpacity>
             </View>
+            <Text style={styles.errorMessage}>{firebaseErrors}</Text>
           </View>
         )}
       </Formik>

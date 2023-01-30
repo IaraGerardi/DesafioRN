@@ -145,24 +145,6 @@ export const cardStyles = StyleSheet.create({
       textAlign: "center",
     },
   },
-  joinDCUniverse: {
-    mainContainer: {
-      paddingHorizontal: 15,
-      // backgroundColor: "blue",
-    },
-    image: {
-      // backgroundColor: "blue",
-    },
-    subtitle: {
-      // backgroundColor: "blue",
-    },
-    title: {
-      // backgroundColor: "blue",
-    },
-    button: {
-      // backgroundColor: "blue",
-    },
-  },
   theWorldOfBatman: {
     mainContainer: {
       flex: 1,
@@ -188,8 +170,8 @@ export const cardStyles = StyleSheet.create({
       height: 400,
     },
     title: {
-      fontWeight: '600',
-      textAlign: 'center'
-    }
+      fontWeight: "600",
+      textAlign: "center",
+    },
   },
 });

@@ -34,7 +34,7 @@ export function Search({ characters, setSearchedCharacters }) {
 export default SearchBar;
 
 import React from "react";
-import { StyleSheet, Keyboard } from "react-native";
+import { StyleSheet } from "react-native";
 import { Feather, Entypo } from "@expo/vector-icons";
 
 const SearchBar = ({ clicked, searchPhrase, setSearchPhrase, setClicked }) => {
@@ -84,9 +84,9 @@ const styles = StyleSheet.create({
   searchBar: {
     padding: 10,
     width: "95%",
-    borderBottomWidth: 1,
-    flexDirection: "row",
     alignItems: "center",
+    flexDirection: "row",
+    borderBottomWidth: 1,
   },
   input: {
     width: "90%",
